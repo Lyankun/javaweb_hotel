@@ -1,0 +1,56 @@
+2020.09.14 at 18:36:31.817 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2020.09.14 at 18:36:32.447 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT room_num,SUM(sale_price) as saleprices from roomsale GROUP BY room_num 
+2020.09.14 at 18:36:32.467 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2020.09.14 at 18:36:32.487 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: room_num, saleprices
+2020.09.14 at 18:36:32.487 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 8203, 216
+2020.09.14 at 18:36:32.530 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 8204, 1314
+2020.09.14 at 18:36:32.530 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 8205, 342
+2020.09.14 at 18:36:32.530 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 8206, 2610
+2020.09.14 at 18:36:32.530 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 8207, 224
+2020.09.14 at 18:36:32.530 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 8208, 3688
+2020.09.14 at 18:36:32.530 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 6
+2020.09.14 at 18:36:32.640 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2020.09.14 at 18:36:32.807 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: SELECT count(0) FROM in_room_info WHERE status = '1' 
+2020.09.14 at 18:36:32.807 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 
+2020.09.14 at 18:36:32.807 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: count(0)
+2020.09.14 at 18:36:32.807 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 10
+2020.09.14 at 18:36:32.807 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2020.09.14 at 18:36:32.807 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status from in_room_info WHERE status='1' order by id desc limit ?,? 
+2020.09.14 at 18:36:32.807 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 0(Integer), 3(Integer)
+2020.09.14 at 18:36:32.817 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, customer_name, gender, is_vip, idcard, phone, money, create_date, room_id, status, out_room_status
+2020.09.14 at 18:36:32.817 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 41, 小白, 1, 0, 123123123123123123, 13212321232, 90.00, 2020-02-06 14:09:06.0, 9, 1, 0
+2020.09.14 at 18:36:32.878 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 40, 玉帝, 1, 1, 101101000001010001, 13499997766, 100.00, 2020-02-21 17:48:25.0, 14, 1, 0
+2020.09.14 at 18:36:32.878 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 39, 貂蝉, 0, 1, 421101016809098989, 15699998898, 80.00, 2020-02-21 17:39:36.0, 13, 1, 0
+2020.09.14 at 18:36:32.878 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 3
+2020.09.14 at 18:36:32.878 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 42 test01 - --------------------------------------
+2020.09.14 at 18:36:32.878 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 43 test01 - 共有10条数据
+2020.09.14 at 18:36:32.878 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 46 test01 - 小白,13212321232
+2020.09.14 at 18:36:32.878 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 47 test01 - -----------------------------
+2020.09.14 at 18:36:32.878 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id, flag from rooms where id = ? 
+2020.09.14 at 18:36:32.888 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 9(Integer)
+2020.09.14 at 18:36:32.888 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id, flag
+2020.09.14 at 18:36:32.888 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 9, fm3.jpg, 8209, 0, 3, 1
+2020.09.14 at 18:36:32.888 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2020.09.14 at 18:36:32.888 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 48 test01 - Rooms{id=9, roomPic='fm3.jpg', roomNum='8209', roomStatus='0', roomTypeId=3, flag=1}
+2020.09.14 at 18:36:32.898 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 49 test01 - ----------------------------------
+2020.09.14 at 18:36:32.898 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 50 test01 - RoomType{id=3, roomTypeName='豪华间', roomPrice=280.0}
+2020.09.14 at 18:36:32.898 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 46 test01 - 玉帝,13499997766
+2020.09.14 at 18:36:32.898 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 47 test01 - -----------------------------
+2020.09.14 at 18:36:32.898 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id, flag from rooms where id = ? 
+2020.09.14 at 18:36:32.898 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 14(Integer)
+2020.09.14 at 18:36:32.898 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id, flag
+2020.09.14 at 18:36:32.898 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 14, fm2.jpg, 8302, 0, 2, 1
+2020.09.14 at 18:36:32.908 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2020.09.14 at 18:36:32.908 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 48 test01 - Rooms{id=14, roomPic='fm2.jpg', roomNum='8302', roomStatus='0', roomTypeId=2, flag=1}
+2020.09.14 at 18:36:32.908 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 49 test01 - ----------------------------------
+2020.09.14 at 18:36:32.908 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 50 test01 - RoomType{id=2, roomTypeName='双人间', roomPrice=180.0}
+2020.09.14 at 18:36:32.908 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 46 test01 - 貂蝉,15699998898
+2020.09.14 at 18:36:32.908 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 47 test01 - -----------------------------
+2020.09.14 at 18:36:32.908 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==>  Preparing: select id, room_pic, room_num, room_status, room_type_id, flag from rooms where id = ? 
+2020.09.14 at 18:36:32.908 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - ==> Parameters: 13(Integer)
+2020.09.14 at 18:36:32.908 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==    Columns: id, room_pic, room_num, room_status, room_type_id, flag
+2020.09.14 at 18:36:32.908 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 151 trace - <==        Row: 13, fm1.jpg, 8301, 0, 5, 1
+2020.09.14 at 18:36:32.908 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 145 debug - <==      Total: 1
+2020.09.14 at 18:36:32.908 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 48 test01 - Rooms{id=13, roomPic='fm1.jpg', roomNum='8301', roomStatus='0', roomTypeId=5, flag=1}
+2020.09.14 at 18:36:32.908 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 49 test01 - ----------------------------------
+2020.09.14 at 18:36:32.908 CST INFO  cn.com.Lyankun.ssm.test.InRoomInfoTest 50 test01 - RoomType{id=5, roomTypeName='总统套房', roomPrice=500.0}
